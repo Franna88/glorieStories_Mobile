@@ -163,17 +163,14 @@ class TrackBuilder extends StatelessWidget {
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(15.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(75),
+                                child: ClipOval(
+                                  child: Container(
                                     color: Colors.white,
-                                  ),
-                                  height: 70,
-                                  width: 70,
-                                  child: ImageNetwork(
-                                    image: stories['imageUrl'],
-                                    height: 70,
-                                    width: 70,
+                                    child: ImageNetwork(
+                                      image: stories['imageUrl'],
+                                      width: 60,
+                                      height: 100,
+                                    ),
                                   ),
                                 ),
                               ),
