@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "409865047782",
+    "project_id": "glorie-stories",
+    "storage_bucket": "glorie-stories.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409865047782:android:f68885158074fa297fb527",
+        "android_client_info": {
+          "package_name": "com.example.glorie_stories_v1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409865047782-11lgi60kmdas9p3ppabg4isvv83m38el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOYUdTnKFPg0woZt3vRr0E5AIWPAyowkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409865047782-11lgi60kmdas9p3ppabg4isvv83m38el.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "409865047782-qfnmr7vj0g08ha9r11q9gq3uoi5ccdmp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.glorie_stories_v1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

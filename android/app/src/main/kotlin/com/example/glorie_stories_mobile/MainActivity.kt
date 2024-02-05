@@ -1,4 +1,4 @@
-package com.example.glorie_stories_mobile
+package com.example.glorie_stories_v1
 
 import io.flutter.embedding.android.FlutterActivity
 
