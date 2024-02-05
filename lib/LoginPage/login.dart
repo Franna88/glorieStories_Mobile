@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:glorie_stories_mobile/HomePage/home.dart';
 import 'package:glorie_stories_mobile/LoginPage/register.dart';
 
-
 class Login extends StatefulWidget {
   const Login({super.key});
 
@@ -13,20 +12,23 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
+          height: size.height,
           decoration: const BoxDecoration(color: Colors.white),
           child: Column(
             children: [
               Container(
+                height: size.height / 2.1,
                 color: Colors.white,
                 //margin: EdgeInsets.only(top: 200),
                 //child: Image.asset('imges/welcomeAndImage.png'),
                 child: Image.asset('imges/new_cover.jpeg'),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 10),
                 child: const Text(
                   'Login',
                   style: TextStyle(
@@ -37,7 +39,7 @@ class _LoginState extends State<Login> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 30),
+                margin: const EdgeInsets.only(top: 10),
                 child: Column(
                   children: [
                     Container(
@@ -83,7 +85,7 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     Row(
                       children: [
                         Container(
@@ -119,7 +121,7 @@ class _LoginState extends State<Login> {
                         )
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
                     MaterialButton(
                       onPressed: () {
                         Navigator.push(
@@ -143,7 +145,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 20, bottom: 50),
+                      margin: const EdgeInsets.only(top: 5, bottom: 50),
                       child: TextButton(
                         onPressed: () {
                           Navigator.push(
