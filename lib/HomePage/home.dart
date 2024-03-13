@@ -28,11 +28,11 @@ class HomeScreen extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: Text('Neem Kennis'),
-                      content: Text('Hierdie funksie kom binnekort'),
+                      title: const Text('Neem Kennis'),
+                      content: const Text('Hierdie funksie kom binnekort'),
                       actions: <Widget>[
                         TextButton(
-                          child: Text('OK'),
+                          child: const Text('OK'),
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
@@ -64,11 +64,11 @@ class HomeScreen extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: Text('Neem Kennis'),
-                      content: Text('Hierdie funksie kom binnekort'),
+                      title: const Text('Neem Kennis'),
+                      content: const Text('Hierdie funksie kom binnekort'),
                       actions: <Widget>[
                         TextButton(
-                          child: Text('OK'),
+                          child: const Text('OK'),
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
@@ -174,17 +174,17 @@ class TrackBuilder extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 5),
+                              const SizedBox(width: 5),
                               SizedBox(
                                 width: size.width - 200,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    SizedBox(height: 1),
+                                    const SizedBox(height: 1),
                                     Text(
                                       stories['title'],
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white,
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold),
@@ -193,12 +193,12 @@ class TrackBuilder extends StatelessWidget {
                                       children: [
                                         Text(
                                           stories['author'],
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.white,
                                             fontSize: 14,
                                           ),
                                         ),
-                                        Text(
+                                        const Text(
                                           ' - ',
                                           style: TextStyle(
                                             color: Colors.white,
@@ -207,7 +207,7 @@ class TrackBuilder extends StatelessWidget {
                                         ),
                                         Text(
                                           stories['timeframe'],
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.white,
                                             fontSize: 14,
                                           ),

@@ -12,44 +12,41 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  final TextEditingController nameSurnameTextController =
+      TextEditingController(text: '');
+
+  final TextEditingController surnameTextController =
+      TextEditingController(text: '');
+
+  final TextEditingController emailTextController =
+      TextEditingController(text: '');
+
+  Future<void> createUser() async {
+    try {
+      final CollectionReference storiesCollecion =
+          FirebaseFirestore.instance.collection('users');
+      var uuid = const Uuid();
+      var id = uuid.v1();
+      await storiesCollecion.doc(id).set({
+        'id': id,
+        'nameSurname': nameSurnameTextController.text,
+        'email': emailTextController.text,
+        'pakket': "gratis",
+        'uploadDate': DateTime.now(),
+      });
+
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('Registered successfully.')));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const Login()));
+    } catch (error) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(const SnackBar(content: Text('Error uploading document.')));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-// text editing controllers
-    final TextEditingController nameSurnameTextController =
-        TextEditingController(text: '');
-    // text editing controllers
-    final TextEditingController surnameTextController =
-        TextEditingController(text: '');
-    // text editing controllers
-    final TextEditingController emailTextController =
-        TextEditingController(text: '');
-
-    Future<void> createUser() async {
-      try {
-        final CollectionReference storiesCollecion =
-            FirebaseFirestore.instance.collection('users');
-        var uuid = Uuid();
-        var id = uuid.v1();
-        await storiesCollecion.doc(id).set({
-          'id': id,
-          'nameSurname': nameSurnameTextController.text,
-          'email': emailTextController.text,
-          'pakket': "gratis",
-          'uploadDate': DateTime.now(),
-        });
-
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('Registered successfully.')));
-
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const Login()));
-      } catch (error) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('Error uploading document.')));
-        //Navigator.of(context).pop();
-      }
-    }
-
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -125,52 +122,6 @@ class _RegisterState extends State<Register> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    /*  Container(
-                      margin: const EdgeInsets.only(left: 50, right: 50),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: Container(
-                            margin: const EdgeInsets.only(left: 20, right: 10),
-                            child: const Icon(
-                              Icons.lock,
-                              color: Colors.black,
-                            ),
-                          ),
-                          filled: true,
-                          fillColor: const Color(0xFF82E6EB),
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          labelText: 'Password',
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Container(
-                      margin: const EdgeInsets.only(left: 50, right: 50),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: Container(
-                            margin: const EdgeInsets.only(left: 20, right: 10),
-                            child: const Icon(
-                              Icons.lock,
-                              color: Colors.black,
-                            ),
-                          ),
-                          filled: true,
-                          fillColor: const Color(0xFF82E6EB),
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide.none,
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          labelText: 'Confirm Password',
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                   */
-
                     MaterialButton(
                       onPressed: () {
                         createUser();

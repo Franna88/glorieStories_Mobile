@@ -5,7 +5,7 @@ import 'package:just_audio/just_audio.dart';
 class AudioPlayerPage extends StatefulWidget {
   final String? trackId;
 
-  AudioPlayerPage({Key? key, required this.trackId}) : super(key: key);
+  const AudioPlayerPage({Key? key, required this.trackId}) : super(key: key);
 
   @override
   _AudioPlayerPageState createState() => _AudioPlayerPageState();
@@ -99,7 +99,7 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
             },
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

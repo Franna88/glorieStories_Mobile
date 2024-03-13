@@ -19,6 +19,7 @@ class TrackInfo extends StatelessWidget {
     this.trackImg,
   });
 
+  @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
 
@@ -61,7 +62,7 @@ class TrackInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             Container(
@@ -80,7 +81,7 @@ class TrackInfo extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
-                color: Color.fromARGB(255, 15, 184, 199),
+                color: const Color.fromARGB(255, 15, 184, 199),
               ),
               height: 400,
               width: size.width - 60,
@@ -105,7 +106,7 @@ class TrackInfo extends StatelessWidget {
                               width: 120,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 32,
                           ),
                           Text(
@@ -123,12 +124,12 @@ class TrackInfo extends StatelessWidget {
                               children: [
                                 Text(
                                   trackAuthor!,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
                                   ),
                                 ),
-                                Text(
+                                const Text(
                                   ' - ',
                                   style: TextStyle(
                                     color: Colors.white,
@@ -137,7 +138,7 @@ class TrackInfo extends StatelessWidget {
                                 ),
                                 Text(
                                   trackTime!,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,
                                   ),

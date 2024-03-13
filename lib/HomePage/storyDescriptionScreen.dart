@@ -35,11 +35,11 @@ class _StoryDescriptionState extends State<StoryDescription> {
           Container(
             width: size.width,
             height: size.height / 3,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color.fromARGB(255, 130, 230, 235),
-              borderRadius: new BorderRadius.only(
-                bottomRight: const Radius.circular(30.0),
-                bottomLeft: const Radius.circular(30.0),
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(30.0),
+                bottomLeft: Radius.circular(30.0),
               ),
             ),
             child: Column(
@@ -69,7 +69,7 @@ class _StoryDescriptionState extends State<StoryDescription> {
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
-                        color: Color.fromARGB(255, 130, 230, 235),
+                        color: const Color.fromARGB(255, 130, 230, 235),
                       ),
                       height: 150,
                       width: size.width / 2,
@@ -84,23 +84,23 @@ class _StoryDescriptionState extends State<StoryDescription> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           ),
           Text(
             widget.trackAuthor!,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Text(
             widget.trackTime!,
-            style: TextStyle(
+            style: const TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.w200),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Center(
@@ -108,14 +108,14 @@ class _StoryDescriptionState extends State<StoryDescription> {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 widget.trackDescription!,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w400),
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           MaterialButton(
             onPressed: () {
               Navigator.push(
@@ -150,7 +150,7 @@ class _StoryDescriptionState extends State<StoryDescription> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
         ],

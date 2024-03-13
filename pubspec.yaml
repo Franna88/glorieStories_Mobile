@@ -41,6 +41,7 @@ dependencies:
  
   just_audio: ^0.9.36
   image_network: ^2.5.4+1
+  firebase_auth: ^4.17.9
 
 dev_dependencies:
   flutter_test:
